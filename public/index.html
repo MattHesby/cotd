@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>COTD</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
+  <script src="app.js"></script>
+</head>
+<body>
+  <body ng-app="spectrum" ng-controller="MainCtrl">
+
+  <div ng-repeat="spectrum in spectrums">
+    <div style="border: 2px solid black;width: 500px; background-color: rgb({{spectrum.red}}, {{spectrum.green}} , {{spectrum.blue}})">
+    {{spectrum.red}} , {{spectrum.green}} , {{spectrum.blue}}
+
+    <button ng-click="changeRed(spectrum, 15)"> Red + </button>
+    <button ng-click="changeRed(spectrum, -15)"> Red - </button>
+
+    <button ng-click="changeGreen(spectrum, 15)"> Green + </button>
+    <button ng-click="changeGreen(spectrum, -15)"> Green - </button>
+
+    <button ng-click="changeBlue(spectrum, 15)"> Blue + </button>
+    <button ng-click="changeBlue(spectrum, -15)"> Blue - </button>
+
+
+
+    </div>
+  </div>
+</body>
+</body>
+</html>
